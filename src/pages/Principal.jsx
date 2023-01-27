@@ -3,6 +3,7 @@ import EstadoTiempo from "../components/EstadoTiempo";
 import ListaNoticias from "../components/ListaNoticias";
 import '../styles/estilos.css'
 import Reportes from "./Reportes";
+import { Link } from 'react-router-dom';
 
 export default class Principal extends Component {
   render(){
@@ -17,7 +18,7 @@ export default class Principal extends Component {
         <EstadoTiempo />
         </div>
       </div>
-      <Reportes/>
+      <Link to="/rep">Reportes</Link>
       </div>
     );
   }
