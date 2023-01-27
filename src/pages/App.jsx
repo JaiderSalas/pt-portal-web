@@ -5,7 +5,7 @@ import Principal from './Principal'
 import Reportes from './Reportes'
 function App() {
   return (
-    <HashRouter basename='/pt-portal-web/'>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/main" element={<Principal/>} />
