@@ -13,10 +13,7 @@ const ListaNoticias = () => {
       var requests=JSON.parse(localStorage.getItem('requests') || "[]")
       var request = {
         FechaRequest:date,
-        url:'https://gnews.io/api/v4/top-headlines?token=7ac42caf49052220b085e8b3a4faffb6&lang=es&country=co&max=12',
-        params:{
-          Noticias
-        }
+        url:'https://gnews.io/api/v4/top-headlines?token=7ac42caf49052220b085e8b3a4faffb6&lang=es&country=co&max=12'
       }
       requests.push(request)
       localStorage.setItem('requests',JSON.stringify(requests))

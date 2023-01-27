@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 
 function Reportes() {
 
@@ -8,18 +8,19 @@ useEffect(() => {
   const requests = JSON.parse(localStorage.getItem('requests'));
   if (requests) {
    setRequests(requests);
+   console.log(requests)
   }
 }, []);
 
   return (
     <div>
       {
-        requests.map(request => {
+        requests.map((request,i) => {
           return(
-            <div>
+            <div key={i} item={request}>
             <p>Fecha de Peticion: {request.FechaRequest}</p>
             <p>URL: {request.url}</p>
-            <p>datos: {request.params}</p>
+            {/*<p>datos: {request.params}</p>*/}
             </div>
           )
         })

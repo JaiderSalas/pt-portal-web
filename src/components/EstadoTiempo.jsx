@@ -4,6 +4,7 @@ import '../styles/estilos.css'
 
 export default function EstadoTiempo() {
     const [Estado,setEstado] = useState([])
+    const date = new Date()
     useEffect(() => {
     const traerEstado =  async () =>{
       const response = await axios.get('https://api.openweathermap.org/data/2.5/weather?id=3687925&appid=c48f4c6012bc643a5b01467c26b1a1d7&lang=es&&units=metric')
@@ -11,10 +12,7 @@ export default function EstadoTiempo() {
       var requests=JSON.parse(localStorage.getItem('requests') || "[]")
       var request = {
         FechaRequest:date,
-        url:'https://api.openweathermap.org/data/2.5/weather?id=3687925&appid=c48f4c6012bc643a5b01467c26b1a1d7&lang=es&&units=metric',
-        params:{
-          Estado
-        }
+        url:'https://api.openweathermap.org/data/2.5/weather?id=3687925&appid=c48f4c6012bc643a5b01467c26b1a1d7&lang=es&&units=metric'
       }
       requests.push(request)
       localStorage.setItem('requests',JSON.stringify(requests))
