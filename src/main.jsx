@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Rutas from './Routes/Rutas'
+import Login from './pages/Login'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Rutas/>
+    <Login/>
   </React.StrictMode>,
 )
