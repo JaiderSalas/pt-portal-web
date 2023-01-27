@@ -1,6 +1,7 @@
 {
   "name": "pt-portal-web",
-  "private": true,
+  "homepage": "https://jaidersalas.github.io/pt-portal-web",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
