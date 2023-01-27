@@ -25,7 +25,7 @@ export default class Login extends Component {
     usuarios.usuarios.map((usuario)=>{
       if(usuario.usuario === this.state.form.usuario && usuario.contraseña === this.state.form.contraseña){
         alert("Sesion Iniciada")
-        window.location.href="./principal"
+        window.location.href="/pt-portal-web/principal"
       }
       else{
           alert("Usuario o contraseña Incorrectas")
